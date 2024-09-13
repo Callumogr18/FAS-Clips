@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15980\viewh10960\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs48 \cf0 Football Analysis System\
+
+\f1\b0\fs36 Using YOLO, a real time object detection and image segmentation model. YOLO predicts the class of each person/thing on the football pitch, be that a referee, player or even the ball. I used roboflow to download an image detection set specifically for football game, obtaining the YOLOv5 download format. \
+\
+I then made a Jupyter notebook, where I get the specific roboflow dataset using the YOLOv5 format and then ran training on the dataset. I ended up useing that notebook in Google CoLab, obtaining the necessary GPU performance needed to develop and train the application as my laptop would only be able to complete 1 or 2 iterations out of 100 epochs when training on my laptop locally in the terminal until it would just crash and training would be incomplete.\
+\
+After obtaining the best.pt file as a result of training, I then based the YOLO model on this place text file. When predicting, different class names are observed, instead of person it was now player, referee, etc. \
+\
+I wanted to make some changes to the video itself and how the data was looked aesthetically. I iterated over the frames in the sample video, adding each frame to a list, following this the video is then saved in XVID format.\
+\
+I also need a way to track the bounding box for an individual over the course of multiple frames. We can say that the physically closest bounding box in the last frame, to the bounding box in the current frame are likely to belong to the same individual. I made a class to help with this with the necessary functions to detect the frames and track the objects. I used the supervision library to detect x1, y1, x2, y2 co-ordinates of the bounding boxes and turned the output into supervision format.\
+\
+\
+}
