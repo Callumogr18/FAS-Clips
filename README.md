@@ -6,3 +6,5 @@ FAS implmeneted the use of data analytics and machine learning frameworks. I inc
 
 # Conclusion
 FAS has been a success at providing me and my friends new and interesting insights into the sport I love. It also introduced me to the world of machine learning and data analytics which will prove useful in the future as I progress onto better and larger projects in this area. 
+
+![Uploading Screenshot 2024-09-13 at 22.59.20.png…]()
